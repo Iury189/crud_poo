@@ -5,10 +5,10 @@
 </head>
 <body>
 	<nav>
-		<li> <a href="/crud/formulario/form_inserir.php"> Inserir </a> </li>
-		<li> <a href="/crud/formulario/form_listar.php"> Listar </a> </li>
-		<li> <a href="/crud/formulario/form_atualizar.php"> Atualizar </a> </li>
-		<li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
+		<li> <a href="/crud/formulario/form_inserir.php/#inserir"> Inserir </a> </li>
+		<li> <a href="/crud/formulario/form_listar.php/#nome"> Listar </a> </li>
+		<li> <a href="/crud/formulario/form_atualizar.php/#atualizar"> Atualizar </a> </li>
+		<li> <a href="/crud/formulario/form_excluir.php/#excluir"> Excluir </a> </li>
 	</nav>
 </body>
 </html>
