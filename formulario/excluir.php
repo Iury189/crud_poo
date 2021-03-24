@@ -13,9 +13,9 @@
                         
             $cd_aluno = $_POST['cd_aluno'];
 
-            if (!is_int($cd_aluno)) {
-            	header('Location: ../formulario/form_excluir.php');
-            	die();
+            if ( (!is_numeric($cd_aluno)) ) {
+                header('Location: ../formulario/form_excluir.php');
+                die();
             }
                         
             $aluno->setAluno($cd_aluno);

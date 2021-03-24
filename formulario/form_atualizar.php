@@ -13,6 +13,10 @@
         $stm = BD::prepare($sql);
         $stm->execute();
         $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+        if (isset($_GET['cd_aluno'])) {
+        	$aluno = $_GET['cd_aluno'];
+        }
 	?>
 	<nav>
 		<li> <a href="/crud/index.php"> Início </a> </li>
@@ -20,6 +24,7 @@
 		<li> <a href="/crud/formulario/form_listar.php"> Listar </a> </li>
 		<li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
 	</nav>
+	<br>
 	<fieldset>
 		<legend> Atualizar aluno </legend>
 			<form method="POST" autocomplete="off" action="../formulario/atualizar.php">

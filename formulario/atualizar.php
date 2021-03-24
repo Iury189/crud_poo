@@ -15,11 +15,11 @@
             $nome = $_POST['nome'];
             $endereco = $_POST['endereco'];
 
-            if ( (!is_int($cd_aluno)) || (!is_string($nome)) || (!is_string($endereco)) ) {
-            	header('Location: ../formulario/form_atualizar.php');
-            	die();
+            if ( (!is_numeric($cd_aluno)) ) {
+                header('Location: ../formulario/form_atualizar.php');
+                die();
             }
-            
+
             $aluno->setAluno($cd_aluno);            
             $aluno->setNome($nome);
             $aluno->setEndereco($endereco);

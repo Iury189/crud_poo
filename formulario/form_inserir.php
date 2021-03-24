@@ -10,6 +10,7 @@
 		<li> <a href="/crud/formulario/form_atualizar.php"> Atualizar </a> </li>
 		<li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
 	</nav>
+	<br>
 	<fieldset>
 		<legend> Cadastrar aluno </legend>
 			<form method="POST" autocomplete="off" action="../formulario/inserir.php">

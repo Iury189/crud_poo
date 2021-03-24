@@ -16,10 +16,11 @@
     ?>
     <nav>
         <li> <a href="/crud/index.php"> Início </a> </li>
-        <li> <a href="/crud/formulario/form_inserir.php"> Início </a> </li>
+        <li> <a href="/crud/formulario/form_inserir.php"> Inserir </a> </li>
         <li> <a href="/crud/formulario/form_atualizar.php"> Atualizar </a> </li>
         <li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
     </nav>
+    <br>
 	<fieldset> 
 		<legend> Listar alunos </legend>
 		<p> Procurar aluno: <input id="aluno"/> </p>
