@@ -16,9 +16,9 @@
     ?>
     <nav>
         <li> <a href="/crud/index.php"> Início </a> </li>
-        <li> <a href="/crud/formulario/form_inserir.php"> Inserir </a> </li>
-        <li> <a href="/crud/formulario/form_atualizar.php"> Atualizar </a> </li>
-        <li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
+        <li> <a href="/crud/formulario/form_inserir.php/#inserir"> Inserir </a> </li>
+        <li> <a href="/crud/formulario/form_atualizar.php/#atualizar"> Atualizar </a> </li>
+        <li> <a href="/crud/formulario/form_excluir.php/#excluir"> Excluir </a> </li>
     </nav>
     <br>
 	<fieldset> 
@@ -37,9 +37,9 @@
                 echo '<td>'.$key->cd_aluno.'</td>';
                 echo '<td>'.$key->nome.'</td>';
                 echo '<td>'.$key->endereco.'</td>';
-                echo '<td>'."<a href='../formulario/form_inserir.php'>INSERT</a> ".
-                "<a href='../formulario/form_atualizar.php'>UPDATE</a> ".
-                "<a href='../formulario/form_excluir.php'>DELETE</a>".'</td>';
+                echo '<td>'."<a href='../formulario/form_inserir.php/#inserir'>INSERT</a> ".
+                "<a href='../formulario/form_atualizar.php/#atualizar'>UPDATE</a> ".
+                "<a href='../formulario/form_excluir.php/#excluir'>DELETE</a>".'</td>';
                 echo '</tr>'; echo '</p>';
             }
         ?>

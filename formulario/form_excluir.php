@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Excuir aluno </title>
+	<title> Excluir aluno </title>
 </head>
 <body>
 	<?php
@@ -15,14 +15,14 @@
 	?>
 	<nav>
 		<li> <a href="/crud/index.php"> Início </a> </li>
-		<li> <a href="/crud/formulario/form_inserir.php"> Inserir </a> </li>
-		<li> <a href="/crud/formulario/form_listar.php"> Listar </a> </li>
-		<li> <a href="/crud/formulario/form_atualizar.php"> Atualizar </a> </li>
+		<li> <a href="/crud/formulario/form_inserir.php/#inserir"> Inserir </a> </li>
+		<li> <a href="/crud/formulario/form_listar.php/#aluno"> Listar </a> </li>
+		<li> <a href="/crud/formulario/form_atualizar.php/#atualizar"> Atualizar </a> </li>
 	</nav>
 	<br>
 	<fieldset>
 		<legend> Excluir aluno </legend>
-			<form method="POST" autocomplete="off" action="../formulario/excluir.php">
+			<form method="POST" id="excluir" autocomplete="off" action="../formulario/excluir.php">
 				<p> ID aluno:
 					<select name="cd_aluno" required="">
 						<option value=""> Nenhum </option>
@@ -48,8 +48,8 @@
                 echo '<td>'.$key->cd_aluno.'</td>';
                 echo '<td>'.$key->nome.'</td>';
                 echo '<td>'.$key->endereco.'</td>';
-                echo '<td>'."<a href='../formulario/form_inserir.php'>INSERT</a> ".
-                "<a href='../formulario/form_atualizar.php'>UPDATE</a> ";
+                echo '<td>'."<a href='../formulario/form_inserir.php/#inserir'>INSERT</a> ".
+                "<a href='../formulario/form_atualizar.php/#atualizar'>UPDATE</a> ";
                 echo '</tr>'; echo '</p>';
             }
         ?>

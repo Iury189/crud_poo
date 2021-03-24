@@ -20,14 +20,14 @@
 	?>
 	<nav>
 		<li> <a href="/crud/index.php"> Início </a> </li>
-		<li> <a href="/crud/formulario/form_inserir.php"> Inserir </a> </li>
-		<li> <a href="/crud/formulario/form_listar.php"> Listar </a> </li>
-		<li> <a href="/crud/formulario/form_excluir.php"> Excluir </a> </li>
+		<li> <a href="/crud/formulario/form_inserir.php/#inserir"> Inserir </a> </li>
+		<li> <a href="/crud/formulario/form_listar.php/#aluno"> Listar </a> </li>
+		<li> <a href="/crud/formulario/form_excluir.php/#excluir"> Excluir </a> </li>
 	</nav>
 	<br>
 	<fieldset>
 		<legend> Atualizar aluno </legend>
-			<form method="POST" autocomplete="off" action="../formulario/atualizar.php">
+			<form method="POST" id="atualizar" autocomplete="off" action="../formulario/atualizar.php">
 		        <p> ID aluno:
 		            <select name="cd_aluno" onclick="buscaDados()" id="cd_aluno" required="">
 		                <option value=""> Nenhum </option>
