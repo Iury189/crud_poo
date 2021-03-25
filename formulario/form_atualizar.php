@@ -6,17 +6,13 @@
 </head>
 <body>
 	<?php
-		require_once "../dao/crudaluno.php";
-		$aluno = new CrudAluno();
+		require_once "../dao/alunoDAO.php";
+		$aluno = new AlunoDAO();
 
 		$sql = "SELECT cd_aluno, nome FROM aluno";
         $stm = BD::prepare($sql);
         $stm->execute();
         $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-        if (isset($_GET['cd_aluno'])) {
-        	$aluno = $_GET['cd_aluno'];
-        }
 	?>
 	<nav>
 		<li> <a href="/crud/index.php"> Início </a> </li>
@@ -27,17 +23,17 @@
 	<br>
 	<fieldset>
 		<legend> Atualizar aluno </legend>
-			<form method="POST" id="atualizar" autocomplete="off" action="/crud/formulario/atualizar.php">
+			<form method="POST" id="atualizar" autocomplete="off" action="/crud/formulario/atualizar.php" title="Caixa de seleção para escolher o aluno a ser atualizado">
 		        <p> ID aluno:
 		            <select name="cd_aluno" onclick="buscaDados()" id="cd_aluno" required="">
 		                <option value=""> Nenhum </option>
 		                <?php foreach($linhas as $key): ?>
-		                    <option value="<?= $key['cd_aluno'] ?>"><?= $key['nome'] ?></option>
+		                    <option value="<?= $key['cd_aluno'] ?>" title="<?= $key['nome'] ?>"><?= $key['nome'] ?></option>
 		                <?php endforeach ?>
 		            </select>
 		        </p>
-				<p> Nome: <input type="text" name="nome" id="nome" size=30 required=""> </p>
-				<p> Endereço: <input type="text" name="endereco" id="endereco" size=30 required=""> </p>
+				<p> Nome: <input type="text" name="nome" id="nome" size=30 required="" title="Campo para atualizar o nome do aluno"> </p>
+				<p> Endereço: <input type="text" name="endereco" id="endereco" size=30 required="" title="Campo para atualizar o endereço do aluno"> </p>
 				<button name="Atualizar"> Atualizar </button>
 			</form>
 	</fieldset>

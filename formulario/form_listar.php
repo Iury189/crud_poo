@@ -6,13 +6,8 @@
 </head>
 <body>
     <?php
-        require_once "../dao/crudaluno.php";
-        $aluno = new CrudAluno();
-
-        $sql = "SELECT cd_aluno, nome FROM aluno";
-        $stm = BD::prepare($sql);
-        $stm->execute();
-        $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
+        require_once "../dao/alunoDAO.php";
+		$aluno = new AlunoDAO();
     ?>
     <nav>
         <li> <a href="/crud/index.php"> Início </a> </li>
@@ -23,7 +18,7 @@
     <br>
 	<fieldset> 
 		<legend> Listar alunos </legend>
-		<p> Procurar aluno: <input id="aluno"/> </p>
+		<p> Procurar nome do aluno: <input id="aluno"/> </p>
 		<table id="lista" border="1">
         <tr> 
         	<th> ID </th>
@@ -32,11 +27,11 @@
             <th> Ações </th>
         </tr>
         <?php 
-            foreach ($aluno->Select() as $key){
+            foreach ($aluno->Select() as $valor){
                 echo '<tr>';
-                echo '<td>'.$key->cd_aluno.'</td>';
-                echo '<td>'.$key->nome.'</td>';
-                echo '<td>'.$key->endereco.'</td>';
+                echo '<td>'.$valor->getAluno().'</td>';
+                echo '<td>'.$valor->getNome().'</td>';
+                echo '<td>'.$valor->getEndereco().'</td>';
                 echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".
                 "<a href='/crud/formulario/form_excluir.php/#excluir'>Excluir</a>".'</td>';
                 echo '</tr>'; echo '</p>';

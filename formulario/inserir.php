@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php
-		require_once "../dao/crudaluno.php";
+		require_once "../dao/alunoDAO.php";
 
 		$aluno = new CrudAluno();
 

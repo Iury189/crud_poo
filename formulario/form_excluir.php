@@ -5,8 +5,8 @@
 </head>
 <body>
 	<?php
-		require_once "../dao/crudaluno.php";
-		$aluno = new CrudAluno();
+		require_once "../dao/alunoDAO.php";
+		$aluno = new AlunoDAO();
 
 		$sql = "SELECT cd_aluno, nome FROM aluno";
         $stm = BD::prepare($sql);
@@ -22,12 +22,12 @@
 	<br>
 	<fieldset>
 		<legend> Excluir aluno </legend>
-			<form method="POST" id="excluir" autocomplete="off" action="/crud/formulario/excluir.php">
+			<form method="POST" id="excluir" autocomplete="off" action="/crud/formulario/excluir.php" title="Caixa de seleção para escolher o aluno a ser excluído">
 				<p> ID aluno:
 					<select name="cd_aluno" required="">
 						<option value=""> Nenhum </option>
 			  			<?php foreach($linhas as $key): ?>
-		    				<option value="<?= $key['cd_aluno'] ?>"><?= $key['nome'] ?></option>
+		    				<option value="<?= $key['cd_aluno'] ?>" title="<?= $key['nome'] ?>"><?= $key['nome'] ?></option>
 						<?php endforeach ?>
 					</select>
 				</p>
@@ -45,9 +45,9 @@
         <?php 
             foreach ($aluno->Select() as $key){
                 echo '<tr>';
-                echo '<td>'.$key->cd_aluno.'</td>';
-                echo '<td>'.$key->nome.'</td>';
-                echo '<td>'.$key->endereco.'</td>';
+                echo '<td>'.$key->getAluno().'</td>';
+                echo '<td>'.$key->getNome().'</td>';
+                echo '<td>'.$key->getEndereco().'</td>';
                 echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".'</td>';
                 echo '</tr>'; echo '</p>';
             }
