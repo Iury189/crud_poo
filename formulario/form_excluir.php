@@ -8,7 +8,7 @@
 		require_once "../dao/alunoDAO.php";
 		$aluno = new AlunoDAO();
 
-		$sql = "SELECT cd_aluno, nome FROM aluno";
+		$sql = "SELECT cd_aluno, nome FROM aluno ORDER BY cd_aluno";
         $stm = BD::prepare($sql);
         $stm->execute();
         $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
@@ -43,11 +43,11 @@
             <th> Ações </th>
         </tr>
         <?php 
-            foreach ($aluno->Select() as $key){
+            foreach ($aluno->Select() as $valor){
                 echo '<tr>';
-                echo '<td>'.$key->getAluno().'</td>';
-                echo '<td>'.$key->getNome().'</td>';
-                echo '<td>'.$key->getEndereco().'</td>';
+                echo '<td>'.$valor['cd_aluno'].'</td>';
+                echo '<td>'.$valor['nome'].'</td>';
+                echo '<td>'.$valor['endereco'].'</td>';
                 echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".'</td>';
                 echo '</tr>'; echo '</p>';
             }

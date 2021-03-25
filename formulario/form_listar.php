@@ -18,7 +18,7 @@
     <br>
 	<fieldset> 
 		<legend> Listar alunos </legend>
-		<p> Procurar nome do aluno: <input id="aluno"/> </p>
+		<p> Procurar nome do aluno: <input id="aluno" title="Campo para procurar o nome do aluno" /> </p>
 		<table id="lista" border="1">
         <tr> 
         	<th> ID </th>
@@ -29,9 +29,9 @@
         <?php 
             foreach ($aluno->Select() as $valor){
                 echo '<tr>';
-                echo '<td>'.$valor->getAluno().'</td>';
-                echo '<td>'.$valor->getNome().'</td>';
-                echo '<td>'.$valor->getEndereco().'</td>';
+                echo '<td>'.$valor['cd_aluno'].'</td>';
+                echo '<td>'.$valor['nome'].'</td>';
+                echo '<td>'.$valor['endereco'].'</td>';
                 echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".
                 "<a href='/crud/formulario/form_excluir.php/#excluir'>Excluir</a>".'</td>';
                 echo '</tr>'; echo '</p>';

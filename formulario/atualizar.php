@@ -7,7 +7,7 @@
 	<?php
 		require_once "../dao/alunoDAO.php";
 
-		$aluno = new CrudAluno();
+		$aluno = new AlunoDAO();
 
         if (isset($_POST['Atualizar'])) {
             
