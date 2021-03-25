@@ -10,7 +10,7 @@
 		$aluno = new AlunoDAO();
     ?>
     <nav>
-        <li> <a href="/crud/index.php"> Início </a> </li>
+        <li> <a href="/crud/index.php" title="Início"> Início </a> </li>
         <li> <a href="/crud/formulario/form_inserir.php/#inserir" title="Inserir"> Inserir </a> </li>
         <li> <a href="/crud/formulario/form_atualizar.php/#atualizar" title="Atualizar"> Atualizar </a> </li>
         <li> <a href="/crud/formulario/form_excluir.php/#excluir" title="Excluir"> Excluir </a> </li>
