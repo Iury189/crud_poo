@@ -48,8 +48,7 @@
                 echo '<td>'.$key->cd_aluno.'</td>';
                 echo '<td>'.$key->nome.'</td>';
                 echo '<td>'.$key->endereco.'</td>';
-                echo '<td>'."<a href='/crud/formulario/form_inserir.php/#inserir'>INSERT</a> ".
-                "<a href='/crud/formulario/form_atualizar.php/#atualizar'>UPDATE</a> ";
+                echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".'</td>';
                 echo '</tr>'; echo '</p>';
             }
         ?>
