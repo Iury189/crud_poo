@@ -5,32 +5,30 @@
 	abstract class Aluno extends BD {
 		
 		protected $tabela;
-		public $cd_aluno;
-		public $nome;
-		public $endereco;
+		private $cd_aluno, $nome, $endereco;
+
+		public function getAluno() {
+			return $this->cd_aluno;
+		}
+
+		public function getNome() {
+			return $this->nome;
+		}
+
+		public function getEndereco() {
+			return $this->endereco;
+		}
 
 		public function setAluno($cd_aluno) {
 			$this->cd_aluno = $cd_aluno;
-		}
-		
-		public function getAluno() {
-			return $this->cd_aluno;
 		}
 
 		public function setNome($nome) {
 			$this->nome = $nome;
 		}
 		
-		public function getNome() {
-			return $this->nome;
-		}
-
 		public function setEndereco($endereco) {
 			$this->endereco = $endereco;
-		}
-
-		public function getEndereco() {
-			return $this->endereco;
 		}
 	}
 ?>
