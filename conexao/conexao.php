@@ -12,7 +12,7 @@
 
 				try {
 
-					self::$instancia = new PDO('mysql:host=' . HOST . '; dbname=' . BASE, USER, PASS);
+					self::$instancia = new PDO('mysql:host=' . HOST . ';dbname=' . BASE . ';charset=utf8', USER, PASS);
 					self::$instancia->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					self::$instancia->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
