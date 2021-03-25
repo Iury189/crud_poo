@@ -22,7 +22,7 @@
 	<br>
 	<fieldset>
 		<legend> Excluir aluno </legend>
-			<form method="POST" id="excluir" autocomplete="off" action="../formulario/excluir.php">
+			<form method="POST" id="excluir" autocomplete="off" action="/crud/formulario/excluir.php">
 				<p> ID aluno:
 					<select name="cd_aluno" required="">
 						<option value=""> Nenhum </option>
@@ -48,8 +48,8 @@
                 echo '<td>'.$key->cd_aluno.'</td>';
                 echo '<td>'.$key->nome.'</td>';
                 echo '<td>'.$key->endereco.'</td>';
-                echo '<td>'."<a href='../formulario/form_inserir.php/#inserir'>INSERT</a> ".
-                "<a href='../formulario/form_atualizar.php/#atualizar'>UPDATE</a> ";
+                echo '<td>'."<a href='/crud/formulario/form_inserir.php/#inserir'>INSERT</a> ".
+                "<a href='/crud/formulario/form_atualizar.php/#atualizar'>UPDATE</a> ";
                 echo '</tr>'; echo '</p>';
             }
         ?>

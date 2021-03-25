@@ -27,7 +27,7 @@
 	<br>
 	<fieldset>
 		<legend> Atualizar aluno </legend>
-			<form method="POST" id="atualizar" autocomplete="off" action="../formulario/atualizar.php">
+			<form method="POST" id="atualizar" autocomplete="off" action="/crud/formulario/atualizar.php">
 		        <p> ID aluno:
 		            <select name="cd_aluno" onclick="buscaDados()" id="cd_aluno" required="">
 		                <option value=""> Nenhum </option>
