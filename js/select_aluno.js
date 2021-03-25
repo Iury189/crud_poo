@@ -1,4 +1,4 @@
-// JS que retorna a filtragem do nome do aluno
+// JS que retorna a filtragem do aluno pelo seu nome
 var filtro = document.getElementById('aluno');
 var tabela = document.getElementById('lista');
 filtro.onkeyup = function() {
