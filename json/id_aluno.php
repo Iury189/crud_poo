@@ -10,7 +10,7 @@
 		// Prepara a conexao com o banco para comecar a operacao
 		$seleciona = BD::prepare($selecao);
 		// Vincula um valor a um paramentro
-		$seleciona->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
+		$seleciona->bindValue(':cd_aluno', $cd_aluno, PDO::PARAM_INT);
 		// Executa a operacao
 		$seleciona->execute();
 		// Retorna uma matriz contendo todas as linhas do conjunto de resultados
