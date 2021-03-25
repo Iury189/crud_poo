@@ -1,6 +1,6 @@
 <?php
 	// Arquivo crudaluno.php
-	require_once "../dao/crudaluno.php";
+	require_once "../dao/alunoDAO.php";
 	// variavel cd_aluno
 	$cd_aluno = $_GET["cd_aluno"]; // Importante ser $_GET para a requisicao funcionar
 	// Se a selecao for possivel de realizar
@@ -10,7 +10,7 @@
 		// Prepara a conexao com o banco para comecar a operacao
 		$seleciona = BD::prepare($selecao);
 		// Vincula um valor a um paramentro
-		$seleciona->bindValue(':cd_aluno', $cd_aluno, PDO::PARAM_INT);
+		$seleciona->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
 		// Executa a operacao
 		$seleciona->execute();
 		// Retorna uma matriz contendo todas as linhas do conjunto de resultados
