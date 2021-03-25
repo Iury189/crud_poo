@@ -15,9 +15,9 @@
 	?>
 	<nav>
 		<li> <a href="/crud/index.php"> Início </a> </li>
-		<li> <a href="/crud/formulario/form_inserir.php/#inserir"> Inserir </a> </li>
-		<li> <a href="/crud/formulario/form_listar.php/#aluno"> Listar </a> </li>
-		<li> <a href="/crud/formulario/form_atualizar.php/#atualizar"> Atualizar </a> </li>
+		<li> <a href="/crud/formulario/form_inserir.php/#inserir" title="Inserir"> Inserir </a> </li>
+		<li> <a href="/crud/formulario/form_listar.php/#aluno" title="Listar"> Listar </a> </li>
+		<li> <a href="/crud/formulario/form_atualizar.php/#atualizar" title="Atualizar"> Atualizar </a> </li>
 	</nav>
 	<br>
 	<fieldset>
