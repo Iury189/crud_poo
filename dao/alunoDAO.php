@@ -7,34 +7,58 @@
 		protected $tabela = 'aluno'; 
 		
 		public function Insert() {
-			$sql = "INSERT INTO $this->tabela (nome, endereco) VALUES (:nome, :endereco)";
-			$stm = BD::prepare($sql);
-			$stm->bindValue(':nome', $this->getNome());
-			$stm->bindValue(':endereco', $this->getEndereco());
-			return $stm->execute();
+			try {
+				$sql = "INSERT INTO $this->tabela (nome, endereco) VALUES (:nome, :endereco)";
+				$stm = BD::prepare($sql);
+				$stm->bindValue(':nome', $this->getNome());
+				$stm->bindValue(':endereco', $this->getEndereco());
+				return $stm->execute();
+			} catch (PDOException $e) {
+				echo "Erro PDO: Houve um erro na inserção.<br>".$e->getMessage();
+			} catch (Exception $e) {
+				echo "Erro: Operação inválida.<br>".$e->getMessage();
+			} 
 		}
 
 		public function Select() {
-			$sql = "SELECT * FROM $this->tabela";
-			$stm = BD::prepare($sql);
-			$stm->execute();
-			return $stm->fetchAll(PDO::FETCH_ASSOC);
+			try {
+				$sql = "SELECT * FROM $this->tabela";
+				$stm = BD::prepare($sql);
+				$stm->execute();
+				return $stm->fetchAll(PDO::FETCH_ASSOC);
+			} catch (PDOException $e) {
+				echo "Erro PDO: Houve um erro na listagem.<br>".$e->getMessage();
+			} catch (Exception $e) {
+				echo "Erro: Operação inválida.<br>".$e->getMessage();
+			} 
 		}
 
 		public function Update() {
-			$sql = "UPDATE $this->tabela SET nome = :nome, endereco = :endereco WHERE cd_aluno = :cd_aluno";
-			$stm = BD::prepare($sql);
-			$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
-			$stm->bindValue(':nome', $this->getNome());
-			$stm->bindValue(':endereco', $this->getEndereco());
-			return $stm->execute();
+			try {
+				$sql = "UPDATE $this->tabela SET nome = :nome, endereco = :endereco WHERE cd_aluno = :cd_aluno";
+				$stm = BD::prepare($sql);
+				$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
+				$stm->bindValue(':nome', $this->getNome());
+				$stm->bindValue(':endereco', $this->getEndereco());
+				return $stm->execute();	
+			} catch (PDOException $e) {
+				echo "Erro PDO: Houve um erro na atualização.<br>".$e->getMessage();
+			} catch (Exception $e) {
+				echo "Erro: Operação inválida.<br>".$e->getMessage();
+			} 
 		}
 	
 		public function Delete() {
-			$sql = "DELETE FROM $this->tabela WHERE cd_aluno = :cd_aluno";
-			$stm = BD::prepare($sql);
-			$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
-			return $stm->execute();
+			try {
+				$sql = "DELETE FROM $this->tabela WHERE cd_aluno = :cd_aluno";
+				$stm = BD::prepare($sql);
+				$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
+				return $stm->execute();
+			} catch (PDOException $e) {
+				echo "Erro PDO: Houve um erro na exclusão.<br>".$e->getMessage();
+			} catch (Exception $e) {
+				echo "Erro: Operação inválida.<br>".$e->getMessage();
+			} 
 		}
 	}
 ?>
