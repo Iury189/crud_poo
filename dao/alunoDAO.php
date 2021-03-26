@@ -9,7 +9,7 @@
 		public function Insert() {
 			try {
 				$sql = "INSERT INTO $this->tabela (nome, endereco) VALUES (:nome, :endereco)";
-				$stm = BD::prepare($sql);
+				$stm = BD::getInstance()->prepare($sql);
 				$stm->bindValue(':nome', $this->getNome());
 				$stm->bindValue(':endereco', $this->getEndereco());
 				return $stm->execute();
@@ -25,7 +25,7 @@
 		public function Select() {
 			try {
 				$sql = "SELECT * FROM $this->tabela";
-				$stm = BD::prepare($sql);
+				$stm = BD::getInstance()->prepare($sql);
 				$stm->execute();
 				return $stm->fetchAll(PDO::FETCH_ASSOC);
 			} catch (PDOException $e) {
@@ -40,7 +40,7 @@
 		public function Update() {
 			try {
 				$sql = "UPDATE $this->tabela SET nome = :nome, endereco = :endereco WHERE cd_aluno = :cd_aluno";
-				$stm = BD::prepare($sql);
+				$stm = BD::getInstance()->prepare($sql);
 				$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
 				$stm->bindValue(':nome', $this->getNome());
 				$stm->bindValue(':endereco', $this->getEndereco());
@@ -57,7 +57,7 @@
 		public function Delete() {
 			try {
 				$sql = "DELETE FROM $this->tabela WHERE cd_aluno = :cd_aluno";
-				$stm = BD::prepare($sql);
+				$stm = BD::getInstance()->prepare($sql);
 				$stm->bindValue(':cd_aluno', $this->getAluno(), PDO::PARAM_INT);
 				return $stm->execute();
 			} catch (PDOException $e) {
