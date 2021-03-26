@@ -8,7 +8,7 @@
 		// Query que faz a selecao do cd_cliente
 		$selecao = "SELECT * FROM aluno WHERE cd_aluno = :cd_aluno LIMIT 1";
 		// Prepara a conexao com o banco para comecar a operacao
-		$seleciona = BD::getInstance()->prepare($sql);
+		$seleciona = BD::prepare($selecao);
 		// Vincula um valor a um paramentro
 		$seleciona->bindValue(':cd_aluno', $cd_aluno, PDO::PARAM_INT);
 		// Executa a operacao
