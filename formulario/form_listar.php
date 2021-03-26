@@ -21,17 +21,17 @@
 		<p> Procurar nome do aluno: <input id="aluno" title="Campo para procurar o nome do aluno" /> </p>
 		<table id="lista" border="1">
         <tr> 
-        	<th> ID </th>
-            <th> Nome </th>
-            <th> Endereço </th>
-            <th> Ações </th>
+        	<th title="ID"> ID </th>
+            <th title="Nome"> Nome </th>
+            <th title="Endereço"> Endereço </th>
+            <th title="Ações"> Ações </th>
         </tr>
         <?php 
             foreach ($aluno->Select() as $valor){
                 echo '<tr>';
-                echo '<td>'.$valor['cd_aluno'].'</td>';
-                echo '<td>'.$valor['nome'].'</td>';
-                echo '<td>'.$valor['endereco'].'</td>';
+                echo '<td title="'.$valor['cd_aluno'].'">'.$valor['cd_aluno'].'</td>';
+                echo '<td title="'.$valor['nome'].'">'.$valor['nome'].'</td>';
+                echo '<td title="'.$valor['endereco'].'">'.$valor['endereco'].'</td>';
                 echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar' title='Atualizar'>Atualizar</a> ".
                 "<a href='/crud/formulario/form_excluir.php/#excluir' title='Excluir'>Excluir</a>".'</td>';
                 echo '</tr>'; echo '</p>';
