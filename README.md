@@ -1,4 +1,4 @@
-<h1 align="center"> Sobre o código </h1>
+<h1 align="center"> Função do código </h1>
 O código em questão trata-se de um CRUD feito em PHP Orientado a Objeto com as funções de inserção, listagem, atualização e exclusão inclusas em formulários HTML.
 
 ### Descrição do código: <h3>
