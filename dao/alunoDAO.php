@@ -15,8 +15,10 @@
 				return $stm->execute();
 			} catch (PDOException $e) {
 				echo "Erro PDO: Houve um erro na inserção.<br>".$e->getMessage();
+				die();
 			} catch (Exception $e) {
 				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				die();
 			} 
 		}
 
@@ -28,8 +30,10 @@
 				return $stm->fetchAll(PDO::FETCH_ASSOC);
 			} catch (PDOException $e) {
 				echo "Erro PDO: Houve um erro na listagem.<br>".$e->getMessage();
+				die();
 			} catch (Exception $e) {
 				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				die();
 			} 
 		}
 
@@ -43,8 +47,10 @@
 				return $stm->execute();	
 			} catch (PDOException $e) {
 				echo "Erro PDO: Houve um erro na atualização.<br>".$e->getMessage();
+				die();
 			} catch (Exception $e) {
 				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				die();
 			} 
 		}
 	
@@ -56,8 +62,10 @@
 				return $stm->execute();
 			} catch (PDOException $e) {
 				echo "Erro PDO: Houve um erro na exclusão.<br>".$e->getMessage();
+				die();
 			} catch (Exception $e) {
 				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				die();
 			} 
 		}
 	}
