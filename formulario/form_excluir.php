@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title> Excluir aluno </title>
 </head>
 <body>
@@ -48,7 +49,7 @@
                 echo '<td title="'.$valor['cd_aluno'].'">'.$valor['cd_aluno'].'</td>';
                 echo '<td title="'.$valor['nome'].'">'.$valor['nome'].'</td>';
                 echo '<td title="'.$valor['endereco'].'">'.$valor['endereco'].'</td>';
-                echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar' title='Atualizar'>Atualizar</a> ".'</td>';
+                echo '<td>'."<a href='/crud/formulario/form_atualizar.php/?cd_aluno=<?= $valor['cd_aluno']; ?>#atualizar' title='Atualizar'>Atualizar</a>".'</td>';
                 echo '</tr>'; echo '</p>';
             }
         ?>

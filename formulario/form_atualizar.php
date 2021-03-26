@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title> Atualizar aluno </title>
 	<script type="text/javascript" src="/crud/json/requisicao_aluno.js"></script>
 </head>
