@@ -10,7 +10,7 @@
 		$aluno = new AlunoDAO();
 
 		$sql = "SELECT cd_aluno, nome FROM aluno ORDER BY cd_aluno";
-        $stm = BD::prepare($sql);
+        $stm = BD::getInstance()->prepare($sql);
         $stm->execute();
         $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
 	?>
