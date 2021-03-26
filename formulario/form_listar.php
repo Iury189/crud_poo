@@ -32,8 +32,8 @@
                 echo '<td>'.$valor['cd_aluno'].'</td>';
                 echo '<td>'.$valor['nome'].'</td>';
                 echo '<td>'.$valor['endereco'].'</td>';
-                echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar'>Atualizar</a> ".
-                "<a href='/crud/formulario/form_excluir.php/#excluir'>Excluir</a>".'</td>';
+                echo '<td>'."<a href='/crud/formulario/form_atualizar.php/#atualizar' title='Atualizar'>Atualizar</a> ".
+                "<a href='/crud/formulario/form_excluir.php/#excluir' title='Excluir'>Excluir</a>".'</td>';
                 echo '</tr>'; echo '</p>';
             }
         ?>
