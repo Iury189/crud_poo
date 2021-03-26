@@ -23,3 +23,4 @@ O código em questão trata-se de um CRUD feito em PHP Orientado a Objeto com as
   * id_aluno.php: Arquivo que faz a busca de determinado aluno pelo seu ID.
   * requisicao_aluno.js: Arquivo que faz a requisição dos dados de determinado aluno pelo seu ID.
 * index.php: Arquivo inicial do código. 
+* crudpoo.sql: Banco de dados exportados com registros inseridos para testes. 
