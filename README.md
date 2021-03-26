@@ -1,7 +1,7 @@
 <h1 align="center"> Sobre o código </h1>
-O código em questão trata-se de um CRUD feito em PHP Orientado a Objeto com as funções de inserção, listagem, atualização e exclusão.
+O código em questão trata-se de um CRUD feito em PHP Orientado a Objeto com as funções de inserção, listagem, atualização e exclusão em formulários.
 
-### Sobre as pasta do código <h3>
+### Descrição do código <h3>
 * /classes:
    * aluno.php: Arquivo que possui a classe **Aluno**.
 * /conexao: 
