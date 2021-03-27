@@ -17,7 +17,7 @@
 				echo "Erro PDO: Houve um erro na inserção.<br>".$e->getMessage();
 				die();
 			} catch (Exception $e) {
-				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				echo "Erro: Operação de inserção inválida.<br>".$e->getMessage();
 				die();
 			} 
 		}
@@ -32,7 +32,7 @@
 				echo "Erro PDO: Houve um erro na listagem.<br>".$e->getMessage();
 				die();
 			} catch (Exception $e) {
-				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				echo "Erro: Operação de listagem inválida.<br>".$e->getMessage();
 				die();
 			} 
 		}
@@ -49,7 +49,7 @@
 				echo "Erro PDO: Houve um erro na atualização.<br>".$e->getMessage();
 				die();
 			} catch (Exception $e) {
-				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				echo "Erro: Operação de atualização inválida.<br>".$e->getMessage();
 				die();
 			} 
 		}
@@ -64,7 +64,7 @@
 				echo "Erro PDO: Houve um erro na exclusão.<br>".$e->getMessage();
 				die();
 			} catch (Exception $e) {
-				echo "Erro: Operação inválida.<br>".$e->getMessage();
+				echo "Erro: Operação de exclusão inválida.<br>".$e->getMessage();
 				die();
 			} 
 		}
