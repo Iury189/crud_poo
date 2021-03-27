@@ -2,7 +2,7 @@
 
 	require_once '../conexao/conexao.php';
 
-	abstract class Aluno extends BD {
+	class Aluno extends BD {
 		
 		protected $tabela;
 		private $cd_aluno, $nome, $endereco;
