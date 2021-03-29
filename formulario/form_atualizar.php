@@ -8,7 +8,6 @@
 <body>
 	<?php
 		require_once "../dao/alunoDAO.php";
-		$aluno = new AlunoDAO();
 
 		$sql = "SELECT cd_aluno, nome FROM aluno ORDER BY cd_aluno";
         $stm = BD::getInstance()->prepare($sql);
