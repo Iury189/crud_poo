@@ -10,9 +10,9 @@
 		require_once "../dao/alunoDAO.php";
 
 		$sql = "SELECT cd_aluno, nome FROM aluno ORDER BY cd_aluno";
-        $stm = BD::getInstance()->prepare($sql);
-        $stm->execute();
-        $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
+                $stm = BD::getInstance()->prepare($sql);
+                $stm->execute();
+                $linhas = $stm->fetchAll(PDO::FETCH_ASSOC);
 	?>
 	<nav>
 		<li> <a href="/crud/index.php" title="Início"> Início </a> </li>
