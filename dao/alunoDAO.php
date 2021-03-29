@@ -24,7 +24,7 @@
 
 		public function Select() {
 			try {
-				$sql = "SELECT * FROM $this->tabela";
+				$sql = "SELECT * FROM $this->tabela ORDER BY cd_aluno";
 				$stm = BD::getInstance()->prepare($sql);
 				$stm->execute();
 				return $stm->fetchAll(PDO::FETCH_ASSOC);
