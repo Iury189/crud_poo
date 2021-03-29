@@ -23,13 +23,13 @@
             	die();
             } else {
             	echo "Erro.";
-            	echo '<p><a href="../formulario/form_insert.php"><button>Refazer operação</button></a></p>';
+            	echo '<p><a href="../formulario/form_inserir.php"><button>Refazer operação</button></a></p>';
             	die();
             }
             
         } else {
             echo "Erro, refaça a operação";
-            echo '<p><a href="../formulario/form_insert.php"><button>Refazer operação</button></a></p>';
+            echo '<p><a href="../formulario/form_inserir.php"><button>Refazer operação</button></a></p>';
             die();
         }
 	?>
